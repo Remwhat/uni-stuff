@@ -8,8 +8,8 @@ import * as ReactBootstrap from 'react-bootstrap';
 export default function App() {
   return (
     <div>
-      <Navbar></Navbar>
       <HotelsView></HotelsView>
+      <Navbar></Navbar>
     </div>
   );
 }
