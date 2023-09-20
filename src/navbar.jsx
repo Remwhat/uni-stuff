@@ -3,9 +3,9 @@ import { Navbar, Nav, Button, FormControl, Form } from 'react-bootstrap';
 
 export const Navbar = () => {
   return (
-    <Navbar expand="lg" className="d-flex justify-content-between">
+    <Navbar expand="lg" bg="light" className="d-flex justify-content-between">
       <Nav
-        className="me-auto my-2 my-lg-0"
+        className="mr-auto my-2 my-lg-0"
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
@@ -13,11 +13,14 @@ export const Navbar = () => {
         <Nav.Link href="#action2">Våra Hotell</Nav.Link>
         <Nav.Link href="#action2">Boka Hotell</Nav.Link>
       </Nav>
+      <div>
+        <h1>Horisonta</h1>
+      </div>
       <div className="d-flex">
         <FormControl
           type="search"
           placeholder="Search"
-          className="me-2"
+          className="mr-2"
           aria-label="Search"
         />
         <Button variant="outline-success">Search</Button>
