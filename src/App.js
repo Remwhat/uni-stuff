@@ -9,7 +9,7 @@ export default function App() {
   return (
     <div>
       <HotelsView></HotelsView>
-      <Navbar></Navbar>
+      <Navbar />
     </div>
   );
 }
