@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, Button, FormControl, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
   return (
@@ -9,9 +10,15 @@ export const Navbar = () => {
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link href="#action1">Hem</Nav.Link>
-        <Nav.Link href="#action2">Våra Hotell</Nav.Link>
-        <Nav.Link href="#action2">Boka Hotell</Nav.Link>
+        <Nav.Link as={Link} to="/hotelsview/all">
+          Hem
+        </Nav.Link>
+        <Nav.Link as={Link} to="/hotelsview">
+          Våra Hotell
+        </Nav.Link>
+        <Nav.Link as={Link} to="/hotelsview">
+          Boka Hotell
+        </Nav.Link>
       </Nav>
       <div>
         <h1>Horisonta</h1>
