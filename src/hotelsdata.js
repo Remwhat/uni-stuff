@@ -6,6 +6,10 @@ export function getHotelsData() {
   return hotelsData;
 }
 
+export function getHotel(hotelID) {
+  return hotelsData.find((hotel) => hotelID == hotelID);
+}
+
 const hotelsData = [
   {
     hotelID: 1,

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Card, Col, Row, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
 import { getHotelsData } from './hotelsdata.js';
 
 export const HotelsView = (props) => {
@@ -40,7 +42,9 @@ export const HotelsView = (props) => {
                         {' '}
                         Boka för {hotel.price} SEK per natt!
                       </Button>
-                      <Button variant="primary">Läs mer</Button>
+                      <Link to={'./hoteldetails/' + hotel.hotelID}>
+                        <Button variant="primary">Läs mer</Button>
+                      </Link>
                     </div>
                   </Card.Body>
                 </Card>

@@ -1,7 +1,10 @@
 import React from 'react';
 import { Col, Row, Button } from 'react-bootstrap';
+import { getHotel } from './hotelsdata';
 
-export const HotelDetails = () => {
+export const HotelDetails = (props) => {
+  const hotelID = props.match.params.hotelID;
+  const hotel = getHotel(hotelID);
   return (
     <Row className="m-2 p-2">
       <Col sm="auto" className="p-1">
@@ -21,7 +24,11 @@ export const HotelDetails = () => {
           {hotel.description}
         </div>
 
-        <div></div>
+        <div>
+          <Button size="md" variant="info">
+            Köp {hotel.price} SEK{' '}
+          </Button>
+        </div>
       </Col>
     </Row>
   );
