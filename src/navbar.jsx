@@ -3,6 +3,7 @@ import { Navbar, Nav, Button, FormControl, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
+  const [searchNow, setSearchNow] = useState('');
   return (
     <Navbar expand="lg" bg="light" className="d-flex justify-content-between">
       <Nav
@@ -29,8 +30,12 @@ export const Navbar = () => {
           placeholder="Search"
           className="mr-2"
           aria-label="Search"
+          value={searchNow}
+          onChange={(e) => setSearchNow(e.target.value)}
         />
-        <Button variant="outline-success">Search</Button>
+        <Link to={'./hotelsview/all' + searchNow}>
+          <Button variant="outline-success">Search</Button>
+        </Link>
       </div>
     </Navbar>
   );

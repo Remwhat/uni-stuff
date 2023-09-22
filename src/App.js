@@ -16,7 +16,7 @@ export default function App() {
     <div>
       <Navbar />
       <Router>
-        <Route path="/hotelsview/:category" component={HotelsView}></Route>
+        <Route path="/hotelsview/:searchNow?" component={HotelsView}></Route>
 
         <Redirect to="/hotelsview/all"></Redirect>
       </Router>
